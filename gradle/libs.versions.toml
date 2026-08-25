@@ -1,25 +1,43 @@
 [versions]
-agp = "9.3.0"
+agp = "9.3.2"
 android-compileSdk = "37"
 android-minSdk = "26"
 android-targetSdk = "36"
 androidx-activity = "1.13.0"
-androidx-appcompat = "1.7.1"
+androidx-appcompat = "1.8.0"
 androidx-core = "1.19.0"
 androidx-espresso = "3.7.0"
 androidx-lifecycle = "2.11.0"
 androidx-testExt = "1.3.0"
-composeHotReload = "1.1.1"
-composeMultiplatform = "1.11.1"
+composeHotReload = "1.2.0"
+composeMultiplatform = "1.12.0-rc01"
+# Compose Multiplatform artifacts that are versioned independently of the plugin.
+composeMaterial3 = "1.9.0"
+composeMaterialIcons = "1.7.3"
 junit = "4.13.2"
-kotlin = "2.3.21"
+kotlin = "2.4.10"
 kotlinx-coroutines = "1.11.0"
 kotlinx-serialization = "1.11.0"
-androidx-navigation = "2.9.2"
-cardinal-sdk = "2.10.2"
-androidx-datastore = "1.2.1"
+androidx-navigation = "2.10.0-alpha02"
+cardinal-sdk = "2.13.2"
+androidx-datastore = "1.3.0-alpha10"
 
 [libraries]
+# Compose Multiplatform
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
+compose-uiTooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "composeMultiplatform" }
+# androidx.compose.ui.tooling.preview.Preview (Android-side previews)
+compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
+# org.jetbrains.compose.ui.tooling.preview.Preview (multiplatform previews)
+compose-componentsUiToolingPreview = { module = "org.jetbrains.compose.components:components-ui-tooling-preview", version.ref = "composeMultiplatform" }
+compose-componentsResources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "composeMaterial3" }
+# Only the core icon set is used (Icons.Default.MoreVert); the extended set is a ~0.5 MB
+# artifact frozen at 1.7.3 whose klib blows up Kotlin/Native linking.
+compose-materialIconsCore = { module = "org.jetbrains.compose.material:material-icons-core", version.ref = "composeMaterialIcons" }
+
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { module = "junit:junit", version.ref = "junit" }
