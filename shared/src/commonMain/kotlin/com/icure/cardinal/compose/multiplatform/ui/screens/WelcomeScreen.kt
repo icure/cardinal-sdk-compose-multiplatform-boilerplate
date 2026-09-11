@@ -14,7 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AppIntent
+import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AuthIntent
 import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AppViewModel
 import com.icure.cardinal.compose.multiplatform.ui.viewmodels.WelcomeIntent
 import com.icure.cardinal.compose.multiplatform.ui.viewmodels.WelcomeViewModel
@@ -48,7 +48,7 @@ fun WelcomeScreen(
                             text = { Text("Logout") },
                             onClick = {
                                 showMenu = false
-                                appViewModel.processIntent(AppIntent.Logout)
+                                appViewModel.processIntent(AuthIntent.Logout)
                             }
                         )
                     }
