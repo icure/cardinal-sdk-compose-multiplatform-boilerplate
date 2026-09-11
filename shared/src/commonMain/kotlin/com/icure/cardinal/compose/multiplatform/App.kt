@@ -8,7 +8,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.icure.cardinal.compose.multiplatform.navigation.AuthNavGraph
 import com.icure.cardinal.compose.multiplatform.ui.screens.WelcomeScreen
 import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AppViewModel
-import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AppState
+import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AuthState
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -19,11 +19,13 @@ fun App() {
         val appState by appViewModel.authState.collectAsState()
 
         when (val state = appState) {
-            is AppState.Unauthenticated,
-            is AppState.PendingValidation -> {
+            is AuthState.Unauthenticated,
+            is AuthState.SolvingChallenge,
+            is AuthState.Error.StartAuthentication,
+            is AuthState.PendingCompletion -> {
                 AuthNavGraph(appViewModel = appViewModel)
             }
-            is AppState.Authenticated -> {
+            is AuthState.Authenticated -> {
                 WelcomeScreen(
                     sdk = state.sdk,
                     sdkId = state.sdkId,

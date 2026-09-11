@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Shared controls -->
+    <string name="action_back">Back</string>
+
+    <!-- Sign in -->
+    <string name="login_title">Sign in</string>
+    <string name="login_intro">We send a one-time code to your address. There is no password to remember.</string>
+    <string name="login_email_label">Email</string>
+    <string name="login_email_placeholder">name@example.com</string>
+    <string name="login_action_send">Send code</string>
+
+    <!-- Kerberus proof-of-work check (shown full screen once the address is in) -->
+    <string name="solving_title">Kerberus check</string>
+    <!-- %1$s is the completed percentage, 0 to 100. -->
+    <string name="solving_percent">%1$s%</string>
+    <string name="solving_body">Proof of work runs on this device. There is nothing to solve — keep the app open.</string>
+    <string name="solving_step_proof">Proof of work on this device</string>
+    <string name="solving_step_request">Requesting your code</string>
+    <string name="solving_step_done">Done</string>
+    <string name="solving_step_running">In progress</string>
+    <string name="solving_step_waiting">Waiting</string>
+    <string name="solving_cancel">Cancel</string>
+
+    <!-- Sign-in could not be started -->
+    <string name="auth_error_title">Could not start sign-in</string>
+    <string name="auth_error_body">The service did not answer, or it refused that address. Check your connection, then try again.</string>
+    <string name="auth_error_detail_label">What the service reported</string>
+    <string name="auth_error_retry">Try again</string>
+
+    <!-- One-time code -->
+    <string name="validation_title">Enter the code</string>
+    <!-- %1$s is the email address the code was sent to. -->
+    <string name="validation_sent_to">Sent to %1$s</string>
+    <!-- %1$s is the number of digits in the code. -->
+    <string name="validation_field_description">Validation code, %1$s digits</string>
+    <string name="validation_checking">Checking the code…</string>
+    <string name="validation_resend">Resend code</string>
+    <!-- %1$s is the remaining cooldown, formatted as minutes:seconds. -->
+    <string name="validation_resend_in">in %1$s</string>
+    <string name="validation_expiry_note">Codes expire ten minutes after they are sent. Check spam if nothing arrives.</string>
+
+    <!-- Why a code was refused, and whether retyping it can help. -->
+    <string name="validation_error_wrong_code">That code is not right. Check the six digits and try again.</string>
+    <string name="validation_error_too_many_attempts">Too many attempts. Wait a few minutes before entering another code.</string>
+    <string name="validation_error_network">No connection to the service. The code is still valid — try again.</string>
+    <string name="validation_error_setup_failed">The code was accepted but sign-in could not finish. Go back and start again from your email address.</string>
+    <string name="validation_error_device_storage">This device’s secure storage is not available, so the account cannot be kept signed in. Entering the code again will not help.</string>
+    <string name="validation_error_unknown">Something went wrong. Go back and start again.</string>
+    <!-- %1$s is the message above, %2$s the technical detail behind it. -->
+    <string name="validation_error_with_detail">%1$s (%2$s)</string>
+
+</resources>
