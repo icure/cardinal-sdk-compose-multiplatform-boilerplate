@@ -23,6 +23,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cardinalcomposemultiplatform.shared.generated.resources.Res
 import cardinalcomposemultiplatform.shared.generated.resources.validation_checking
@@ -49,7 +50,6 @@ import com.icure.cardinal.compose.multiplatform.ui.viewmodels.ValidationCodeLeng
 import com.icure.cardinal.compose.multiplatform.ui.viewmodels.ValidationError
 import kotlinx.coroutines.delay
 import org.jetbrains.compose.resources.stringResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 /** Digits that do not shift width as the countdown runs. */
 private val TabularFigures = TextStyle(fontFeatureSettings = "tnum")

@@ -18,6 +18,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cardinalcomposemultiplatform.shared.generated.resources.Res
 import cardinalcomposemultiplatform.shared.generated.resources.login_action_send
@@ -32,7 +33,6 @@ import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AppViewModel
 import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AuthIntent
 import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AuthState
 import org.jetbrains.compose.resources.stringResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 /**
  * The email step.

@@ -27,6 +27,7 @@ import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cardinalcomposemultiplatform.shared.generated.resources.Res
 import cardinalcomposemultiplatform.shared.generated.resources.solving_body
@@ -44,7 +45,6 @@ import com.icure.cardinal.compose.multiplatform.ui.components.CardinalSecondaryB
 import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AppViewModel
 import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AuthState
 import org.jetbrains.compose.resources.stringResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 /** Digits that do not shift width as the percentage counts up. */
 private val TabularFigures = TextStyle(fontFeatureSettings = "tnum")

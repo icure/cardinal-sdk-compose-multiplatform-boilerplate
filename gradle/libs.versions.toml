@@ -1,26 +1,26 @@
 [versions]
-agp = "9.3.2"
+agp = "9.4.1"
 android-compileSdk = "37"
 android-minSdk = "26"
 android-targetSdk = "36"
 androidx-activity = "1.13.0"
 androidx-appcompat = "1.8.0"
-androidx-core = "1.19.0"
+androidx-core = "1.19.1"
 androidx-espresso = "3.7.0"
 androidx-lifecycle = "2.11.0"
 androidx-testExt = "1.3.0"
 composeHotReload = "1.2.0"
-composeMultiplatform = "1.12.0-rc01"
+composeMultiplatform = "1.12.1"
 # Compose Multiplatform artifacts that are versioned independently of the plugin.
 composeMaterial3 = "1.9.0"
 composeMaterialIcons = "1.7.3"
 junit = "4.13.2"
-kotlin = "2.4.10"
+kotlin = "2.4.20"
 kotlinx-coroutines = "1.11.0"
 kotlinx-serialization = "1.11.0"
-androidx-navigation = "2.10.0-alpha02"
-cardinal-sdk = "2.13.2"
-androidx-datastore = "1.3.0-alpha10"
+androidx-navigation = "2.10.0-beta01"
+cardinal-sdk = "2.14.0"
+androidx-datastore = "1.3.0-alpha11"
 
 [libraries]
 # Compose Multiplatform
@@ -28,10 +28,9 @@ compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.re
 compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
 compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
 compose-uiTooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "composeMultiplatform" }
-# androidx.compose.ui.tooling.preview.Preview (Android-side previews)
+# androidx.compose.ui.tooling.preview.Preview, multiplatform since CMP 1.12. It replaces the
+# deprecated org.jetbrains.compose.ui.tooling.preview.Preview from components-ui-tooling-preview.
 compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
-# org.jetbrains.compose.ui.tooling.preview.Preview (multiplatform previews)
-compose-componentsUiToolingPreview = { module = "org.jetbrains.compose.components:components-ui-tooling-preview", version.ref = "composeMultiplatform" }
 compose-componentsResources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
 compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "composeMaterial3" }
 # Only the core icon set is used (Icons.Default.MoreVert); the extended set is a ~0.5 MB
