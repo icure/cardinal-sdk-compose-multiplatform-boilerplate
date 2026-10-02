@@ -14,6 +14,13 @@ kotlin {
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
 
+        // The KMP Android library plugin disables Android resources by default, which also
+        // drops the assets source set Compose resources are packaged into. Without it, any
+        // Res.string lookup throws MissingResourceException at runtime on Android.
+        androidResources {
+            enable = true
+        }
+
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
         }
