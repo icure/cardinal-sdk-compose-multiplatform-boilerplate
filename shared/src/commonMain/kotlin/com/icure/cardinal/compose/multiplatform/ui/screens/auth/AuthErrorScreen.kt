@@ -21,6 +21,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cardinalcomposemultiplatform.shared.generated.resources.Res
 import cardinalcomposemultiplatform.shared.generated.resources.auth_error_body
@@ -32,7 +33,6 @@ import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AppViewModel
 import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AuthIntent
 import com.icure.cardinal.compose.multiplatform.ui.viewmodels.AuthState
 import org.jetbrains.compose.resources.stringResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 /**
  * Sign-in could not be started — the SDK never got as far as issuing a code.

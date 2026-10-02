@@ -28,10 +28,9 @@ compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.re
 compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
 compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
 compose-uiTooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "composeMultiplatform" }
-# androidx.compose.ui.tooling.preview.Preview (Android-side previews)
+# androidx.compose.ui.tooling.preview.Preview, multiplatform since CMP 1.12. It replaces the
+# deprecated org.jetbrains.compose.ui.tooling.preview.Preview from components-ui-tooling-preview.
 compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
-# org.jetbrains.compose.ui.tooling.preview.Preview (multiplatform previews)
-compose-componentsUiToolingPreview = { module = "org.jetbrains.compose.components:components-ui-tooling-preview", version.ref = "composeMultiplatform" }
 compose-componentsResources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
 compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "composeMaterial3" }
 # Only the core icon set is used (Icons.Default.MoreVert); the extended set is a ~0.5 MB

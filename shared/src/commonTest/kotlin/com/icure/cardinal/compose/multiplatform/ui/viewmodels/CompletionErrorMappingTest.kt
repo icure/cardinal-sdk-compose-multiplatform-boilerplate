@@ -32,7 +32,7 @@ class CompletionErrorMappingTest {
     }
 
     @Test
-    fun `a gateway server error is transient, not the user's fault`() {
+    fun `a gateway server error is transient and not the user's fault`() {
         assertEquals(ValidationError.Network, mapCompletionError(gatewayFailure(503)))
     }
 

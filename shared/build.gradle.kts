@@ -17,6 +17,9 @@ kotlin {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
         }
+
+        // Run commonTest on the Android host JVM too.
+        withHostTest {}
     }
 
     listOf(
@@ -44,7 +47,7 @@ kotlin {
             implementation(libs.compose.materialIconsCore)
             implementation(libs.compose.ui)
             implementation(libs.compose.componentsResources)
-            implementation(libs.compose.componentsUiToolingPreview)
+            implementation(libs.compose.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation(libs.androidx.navigation.compose)
@@ -61,10 +64,10 @@ kotlin {
 }
 
 // --- iOS build configuration (xcconfig) generation ---
-val EXTERNAL_SERVICES_SPEC_ID: String by project
-val APPLICATION_ID: String by project
-val PRODUCT_BUNDLE_IDENTIFIER: String by project
-val PROCESS_ID: String by project
+val EXTERNAL_SERVICES_SPEC_ID = providers.gradleProperty("EXTERNAL_SERVICES_SPEC_ID").get()
+val APPLICATION_ID = providers.gradleProperty("APPLICATION_ID").get()
+val PRODUCT_BUNDLE_IDENTIFIER = providers.gradleProperty("PRODUCT_BUNDLE_IDENTIFIER").get()
+val PROCESS_ID = providers.gradleProperty("PROCESS_ID").get()
 
 // Task to generate xcconfig file for iOS with build configuration values
 abstract class GenerateIosConfigTask : DefaultTask() {
